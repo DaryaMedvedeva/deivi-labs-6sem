@@ -1,0 +1,9 @@
+$color: black;
+
+h1{
+    @if $color == black {
+    color: red;
+    } @else {
+    color: black;
+    }
+}

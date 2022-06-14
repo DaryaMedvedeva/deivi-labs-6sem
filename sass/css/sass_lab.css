@@ -1,0 +1,82 @@
+body {
+  font-family: Montserrat;
+}
+
+#header {
+  background: powderblue;
+  position: fixed;
+  margin-top: -100px;
+  margin-left: -1%;
+  width: 101%;
+  height: 80px;
+  color: black;
+}
+
+#menu {
+  width: 101%;
+  height: 45px;
+  position: fixed;
+  line-height: 45px;
+  font-size: 30px;
+  font-family: Montserrat;
+  margin-top: 1.1%;
+  height: 50px;
+  display: inline;
+}
+
+#id {
+  padding: 1em 0;
+}
+
+input[type=text] {
+  border: 2px solid black;
+  border-radius: 2px;
+  height: 35px;
+}
+
+textarea {
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+nav {
+  display: block;
+  width: 660px;
+  margin: 0 auto 30px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+ul li {
+  display: inline;
+  margin-right: 5px;
+  padding: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#content {
+  margin-top: 100px;
+  margin-left: 15%;
+  margin-right: 10%;
+}
+
+#person1 {
+  margin-top: 100px;
+  margin-left: 0;
+  margin-right: 10%;
+}
+
+form {
+  float: left;
+  width: 90%;
+  height: 80%;
+  background: powderblue;
+  border-radius: 20px;
+}

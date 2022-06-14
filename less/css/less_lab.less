@@ -1,0 +1,70 @@
+@import "per";
+	
+body{
+	font-family: Montserrat;
+	text-align: center;
+}
+.circle
+{
+	background-color: @green;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+	border-radius: 100%/2;
+
+	&:hover{
+		background-color: spin(@green, 180);
+		border-radius: 0;
+	}
+}
+
+
+.bt(@fs, @p1, @p2)
+{
+	color: #fff;
+    border: none;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px+@fs;
+    margin: 4px 2px;
+	padding: 2px*@p1 4px*@p2;
+}
+
+.y
+{
+	.bt(0, 1, 1);
+	background-color: #e0e0e0;
+	color: #333;
+	&:hover{
+		background-color: #bdbdbd;
+	}
+
+}
+
+.n
+{
+	background-color: #2769a2;
+	.bt(4, 3, 3);
+	
+	&:hover{
+		background-color: #61a4de;
+	}
+
+}
+
+.c
+{
+	background-color: #555658;
+	.bt(8, 5, 4);
+
+	&:hover{
+		background-color: #121212;
+	}
+
+}
