@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" lang="ru"/>
+        <title>cookies1</title> 
+        <link href="s1.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="js.cookie.js"></script>
+</head>
+    <body>
+    <script >
+        if(Cookies.get('login')==undefined){
+        let log=prompt('Введите логин');
+        while(log.length<1)
+        {
+            log=prompt('Введите логин!!!');
+        }
+        let pass=prompt('Введите пароль');
+        while(pass.length<1)
+        {
+            pass=prompt('Введите пароль!!!');
+        }
+        let secret=prompt('Введите секретное слово');
+        while(secret.length<1)
+        {
+            secret=prompt('Введите секретное слово!!!');
+        }
+
+        Cookies.set('login', log, {expires:2, path: ''});
+        Cookies.set('password', pass, {expires:2, path: ''});
+        Cookies.set('secret', secret, {expires:2, path: ''});
+    }
+
+        let btn = document.createElement('button');
+        btn.textContent="Показать секретную информацию";
+        btn.setAttribute("onclick", "show()");
+        document.body.appendChild(btn);
+
+        /*функция*/
+        function show(){
+            let check=prompt('Введите секретное слово');
+            if(check==Cookies.get('secret'))
+            {
+                $("input[name='forlog']").val(Cookies.get('login'));
+                $("input[name='forpass']").val(Cookies.get('password'));
+            }
+        };
+        
+        
+        let linebreak = document.createElement("br");
+        document.body.appendChild(linebreak);
+
+        let pl = document.createElement('p');
+        pl.textContent="Логин";
+        document.body.appendChild(pl);
+
+        let inlog = document.createElement('input');
+        inlog.setAttribute("type", "text");
+        inlog.setAttribute("disabled", "true");
+        inlog.setAttribute("name", "forlog");
+        document.body.appendChild(inlog);
+
+        let pp = document.createElement('p');
+        pp.textContent="Пароль";
+        document.body.appendChild(pp);
+
+        let inpass = document.createElement('input');
+        inpass.setAttribute("type", "text");
+        inpass.setAttribute("disabled", "true");
+        inpass.setAttribute("name", "forpass");
+        document.body.appendChild(inpass);
+
+        document.body.appendChild(linebreak);
+
+        let btn2 = document.createElement('button');
+        btn2.textContent="Удалить";
+        btn2.setAttribute("onclick", "cl()");
+        document.body.appendChild(btn2);
+
+        function cl(){
+            Cookies.remove('login', {path: ''});
+            Cookies.remove('password', {path: ''});
+            Cookies.remove('secret', {path: ''});
+            document.location.reload();
+        };
+        
+    </script>
+
+    </body>
+</html>

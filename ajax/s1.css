@@ -1,0 +1,81 @@
+
+body 
+{
+   align-items: center;
+   align-content: center;
+   padding: 0% 0% 14% 20%;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p{
+    margin: 0;
+}
+.date
+{
+    font-size: 12px;
+}
+h3 {
+    margin: 0;
+}
+#headof
+{
+    background-color: rgb(52, 118, 118);
+    color: white;
+    width: 100%;
+    height: auto;
+    font-size: 26px;
+    text-align: center;
+}
+
+.area
+{
+    background-color: rgb(194, 246, 246);
+    width: 70%;
+    height: auto;
+    align-items: center;
+   align-content: center;
+   text-align: center;
+}
+
+textarea
+{
+    margin: 1%;
+    resize: none;
+}
+
+#messages
+{
+    background-color: rgb(248, 254, 254);
+    height: 400px;
+    width: 96%;
+    margin-left: 2%;
+    overflow-y:scroll;
+}
+
+.commentcard
+{
+    padding: 2% 2%;
+}
+
+button {
+    color: #fff;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    background-color: #256953;
+  }
+    button:hover {
+    background-color: #10453d;
+  }
+
+  .mess
+  {
+      background-color: rgb(189, 246, 223);
+      text-align: left;
+      padding: 7px;
+      border-radius: 20px;
+      margin: 1%;
+  }

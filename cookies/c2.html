@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" lang="ru"/>
+        <title>cookies1</title> 
+        <link href="s2.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" href="#">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="js.cookie.js"></script>
+</head>
+    <body>
+        <img src="m.jpg" width="200" height="200">
+        <p>Даша</p>
+        <div>
+            <div id="winter" hidden >
+                <img src="ski.png" width="200" height="200" >
+                <p>На улице зима, поэтому идем на каток.</p>
+            </div>
+            <div id="spring" hidden>
+                <img src="draw.png" width="200" height="200">
+                <p>На улице весна, поэтому рисуем.</p>
+            </div>
+            <div id="summer" hidden>
+                <img src="foto.png" width="300" height="200">
+                <p>На улице лето, поэтому фотографируем пейзажи.</p>
+            </div>
+            <div id="autmn" hidden>
+                <img src="book.png" width="300" height="200">
+                <p>На улице осень, поэтому читаем.</p>
+            </div>
+        </div>
+    <script >
+        if(!Cookies.get('login')){
+        let log=prompt('Как Вас зовут?');
+        while(log.length<1)
+        {
+            log=prompt('Введите Ваше имя!');
+        }
+        Cookies.set('login', log);
+        }
+        
+        let d = new Date();
+        let m=d.getMonth()+1;
+        if( Cookies.get('last'))
+        alert('Здравствуйте, '+Cookies.get('login')+'! \nВ последний раз Вы посещали эту \nстраницу '+ Cookies.get('last') );
+        else 
+        {
+            alert('Здравствуйте, '+Cookies.get('login')+'! \nВы впервые на этой странице!:)' );
+        }
+        
+        if (m > 0 && m <= 3) {
+            $("#winter").removeAttr('hidden');
+        }
+        else if (m >= 4 && m <= 6) {
+            $("#spring").removeAttr('hidden');
+        } 
+        else if (m >= 7 && m <= 9) {
+            $("#summer").removeAttr('hidden');
+        } 
+        else if (m >= 10 && m <=12) {
+            $("#autmn").removeAttr('hidden');
+        }
+
+        Cookies.set('last', d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear());
+    
+        
+    </script>
+
+    </body>
+</html>
